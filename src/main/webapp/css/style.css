@@ -59,3 +59,20 @@ fieldset {
     margin-bottom: .5em;
     width: calc(100% - 6px);
 }
+.navbar {
+    background-color: darkslateblue;
+}
+
+.page-footer {
+    background-color: darkslateblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-decoration-color: lavender;
+}
+
+a {
+    text-decoration-color: lavender;
+    color: lavender;
+    background-color: lavender;
+}
