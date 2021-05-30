@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 @WebServlet(name = "PizzaServlet", urlPatterns = "/pizza-order")
 public class PizzaServlet extends HttpServlet{
@@ -15,12 +17,13 @@ public class PizzaServlet extends HttpServlet{
         String userCrust = req.getParameter("crust-type");
         String userSauce = req.getParameter("sauce-type");
         String userSize = req.getParameter("size-type");
-        String userToppings = req.getParameter("toppings");
+        String[] names = req.getParameterValues("toppings");
+        List<String> list = Arrays.asList(names);
         String userAddress = req.getParameter("address");
         System.out.println(userCrust);
         System.out.println(userSauce);
         System.out.println(userSize);
-        System.out.println(userToppings);
+        System.out.println(list);
         System.out.println(userAddress);
     }
 }

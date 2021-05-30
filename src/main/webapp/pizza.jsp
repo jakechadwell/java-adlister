@@ -11,10 +11,10 @@
     <title>PizzaOrder</title>
 </head>
 <body>
-<form action="/pizza.jsp" method="post">
+<form action="/pizza-order" method="post">
     <div>
         <label for="crust-type">Choose a Crust Type</label>
-        <select id="crust-type">
+        <select id="crust-type" name="crust-type">
             <option>Thin Crust</option>
             <option>Regular Crust</option>
             <option>Stuffed Crust</option>
@@ -22,7 +22,7 @@
     </div>
     <div>
         <label for="sauce-type">Choose a Sauce Type</label>
-        <select id="sauce-type">
+        <select id="sauce-type" name="sauce-type">
             <option>White Sauce</option>
             <option>Red Sauce</option>
             <option>No Sauce</option>
@@ -30,26 +30,26 @@
     </div>
     <div>
         <label for="size-type">Choose a Sauce Type</label>
-        <select id="size-type">
+        <select id="size-type" name="size-type">
             <option>Small</option>
             <option>Medium</option>
             <option>Large</option>
         </select>
     </div>
     <div>
-        <input type="checkbox" value="pepperoni" id="pepperoni">
+        <input type="checkbox" value="pepperoni" id="pepperoni" name="toppings">
         <label for="pepperoni">Pepperoni</label>
-        <input type="checkbox" value="beef" id="beef">
+        <input type="checkbox" value="beef" id="beef" name="toppings">
         <label for="beef">Beef</label>
-        <input type="checkbox" value="sausage" id="sausage">
+        <input type="checkbox" value="sausage" id="sausage" name="toppings">
         <label for="sausage">Sausage</label>
-        <input type="checkbox" value="pineapple" id="pineapple">
+        <input type="checkbox" value="pineapple" id="pineapple" name="toppings">
         <label for="pineapple">Pineapple</label>
-        <input type="checkbox" value="ham" id="ham">
+        <input type="checkbox" value="ham" id="ham" name="toppings">
         <label for="ham">Ham</label>
     </div>
     <div>
-        <input type="text" id="address" placeholder="Example: 123 Cherry Street, 12312">
+        <input type="text" id="address" name="address" placeholder="Example: 123 Cherry Street, 12312">
         <label for="address">Enter Address: </label>
     </div>
     <input type="submit" class="btn btn-block" value="Enter">
