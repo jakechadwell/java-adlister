@@ -10,13 +10,14 @@ public class MySQLAdsDao implements Ads{
     public MySQLAdsDao(Config config){
         try{
             DriverManager.registerDriver(new Driver());
-            this.connection = DriverManager.getConnection(
+            connection = DriverManager.getConnection(
                     config.getUrl(),
                     config.getUser(),
                     config.getPassword()
             );
         }catch(SQLException e){
-            throw new RuntimeException("Error connecting to SQL database.", e);
+//            throw new RuntimeException("Error connecting to SQL database.", e);
+            e.printStackTrace();
         }
     }
 
