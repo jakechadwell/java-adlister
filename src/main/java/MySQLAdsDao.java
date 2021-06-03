@@ -7,7 +7,7 @@ import com.mysql.cj.jdbc.Driver;
 public class MySQLAdsDao implements Ads{
     private Connection connection;
 
-    public MySQLAdsDao(Config config){
+    public MySQLAdsDao(Config config) throws SQLException {
         try{
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
@@ -51,6 +51,7 @@ public class MySQLAdsDao implements Ads{
                     ad.getTitle(),
                     ad.getDescription()
                 );
+            System.out.println(query);
             stmt.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
